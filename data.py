@@ -3,7 +3,7 @@ import pandas as pd
 
 def two_week_wait_data():
     xls = pd.ExcelFile(
-        '/Users/samjoseph/Downloads/SEPTEMBER-2018-CANCER-WAITING-TIMES-PROVIDER-WORKBOOK-FINAL-updated-XLSX-1MB.xlsx')
+        'https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2018/11/SEPTEMBER-2018-CANCER-WAITING-TIMES-PROVIDER-WORKBOOK-FINAL-updated-XLSX-1MB.xlsx')
     df = pd.read_excel(xls, 'TWO WEEK WAIT-BY CANCER',
                        usecols='B:D,J:N', header=6)
     df.columns = ['ODS', 'Provider', 'Cancer Type', 'Within 14 days',
